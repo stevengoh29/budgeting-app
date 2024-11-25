@@ -14,7 +14,12 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    DMSansBold: require('../assets/fonts/DMSans-Bold.ttf'),
+    DMSansExtraBold: require('../assets/fonts/DMSans-ExtraBold.ttf'),
+    DMSansLight: require('../assets/fonts/DMSans-Light.ttf'),
+    DMSansMedium: require('../assets/fonts/DMSans-Medium.ttf'),
+    DMSansRegular: require('../assets/fonts/DMSans-Regular.ttf'),
+    DMSansSemiBold: require('../assets/fonts/DMSans-SemiBold.ttf')
   });
 
   useEffect(() => {
@@ -33,7 +38,7 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style="auto" />
+      <StatusBar style="auto" backgroundColor='white' />
     </ThemeProvider>
   );
 }
